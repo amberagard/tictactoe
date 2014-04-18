@@ -2,10 +2,17 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    title Client Template
+    title Tic Tac Toe
     link(rel='stylesheet', href='./css/app.css')
   body
-    h1 Client Template
+    h1 Tic Tac Toe
+
+    table#board
+        tbody
+            - for(var y = 0; y < 3; y++)
+                tr
+                    -for(var x = 0; x < 3; x++)
+                        td.empty(data-position = [x, y])
 
     script(src='./js/vendor/jquery-2.1.0.js')
     script(src='./js/source/main.js')
